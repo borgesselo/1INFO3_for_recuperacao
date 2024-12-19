@@ -13,12 +13,52 @@
     */
 
     //Entrada
+    const candidato1 = prompt(`Insira o nome do candidato 1`);
+    const candidato2 = prompt(`Insira o nome do candidato 2`);
+    const candidato3 = prompt(`Insira o nome do candidato 3`);
+    const candidato4 = prompt(`Informe o nome do candidato 4`);
+    const eleitores = Number(prompt(`Insira o número de eleitores:`));
 
+    let votosCand1 = 0;
+    let votosCand2 = 0;
+    let votosCand3 = 0;
+    let votosCand4 = 0;
+    let nulos = 0;
+    let branco = 0;
 
     //Processamento
+    for (i = 1; i <= alunosVotantes; i++) {
+        let voto = Number(prompt(`Insira o número do candidato que você deseja votar: 
+        Candidato ${candidato1} (1)   Candidato ${candidato2} (2)    Candidato ${candidato3} (3) Voto em branco (5) Voto nulo (6)`));
 
+        if (voto == 1) {
+            votosCand1++
+        } else if (voto == 2) {
+            votosCand2++
+        }
+        else if (voto == 3) {
+            votosCand3++
+        }
+         else if (voto == 4) {
+            votosCand4++ }
+        else if (voto == 5) {
+            nulos++
+        }
+        else {
+            branco++
+        }
+        
+    }
 
     //Saída
+    document.write(`Votos no total: ${alunosVotantes} <br>
+     Votos no candidato ${candidato1}: ${votosCand1} (${votosCand1*100/eleitores}%)<br>
+     Votos no candidato ${candidato2}: ${votosCand2} (${votosCand2*100/eleitores}%)<br>
+     Votos no candidato ${candidato3}: ${votosCand3} (${votosCand3*100/eleitores}%) <br>
+     Votos no candidato ${candidato4}: ${votosCand4} (${votosCand4*100/eleitores}%) <br>
+     Votos nulos: ${nulos} (${nulos*100/eleitores}%) <br>
+     Votos em branco: ${branco} (${branco*100/eleitores}%) <br>
+     `);
 
     /*
     Desafio :)

@@ -6,12 +6,23 @@
     */
 
     //Entrada
-
+    const quantasNotas = Number(prompt(`Informe a quantidade de notas que o aluno obteve:`));
+    let soma = 0
+    
 
     //Processamento
-
+    for( let i = 1; i <= quantasNotas; i++){
+        let notas = Number(prompt(`Informe a nota ${i}`));
+        soma += notas
+        
+    }
+    let media = soma / quantasNotas;
+    let maiorNota = quantasNotas[0];
+    let menorNota = quantasNotas[quantasNotas.length - 1];
 
     //Saída
+    document.write(`Sua média será ${media.toFixed(2)}. Sua menor nota será ${menorNota}. Sua maior nota será: ${maiorNota}`);
+
     /*
     Exemplo:
     Notas: 4

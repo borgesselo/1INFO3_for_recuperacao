@@ -8,12 +8,23 @@
     */
 
     //Entrada
-
+    let listaPredios = ["Bloco A", "Bloco B", "Bloco C", "Bloco D", "Bloco E"];
+    let novos = [];
+    let antigos = [];
 
     //Processamento
-
+    for (const item of listaPredios) {
+        const N = prompt(`Informe se o bloco ${item} é novo ou antigo:`).trim().toLowerCase();
+        if (N == "novo"){
+           novos.push(item);
+        }
+        else if (N == "antigo"){
+            antigos.push(item);
+        }
+    }
 
     //Saída
+    document.write(`Blocos novos: ${novos.join(",")} <br> Blocos antigos: ${antigos.join(",")}`);
 
     /*
     Blocos novos: Bloco B, Bloco D, Bloco E
